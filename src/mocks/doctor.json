@@ -1,0 +1,253 @@
+[
+  {
+    "doctorId": "DOC001",
+    "firstName": "Adebayo",
+    "lastName": "Johnson",
+    "gender": "Male",
+    "dateOfBirth": "1982-06-14",
+    "age": 44,
+   
+    "phone": "+2348012345678",
+    "email": "adebayo.johnson@hospital.com",
+    "address": {
+      "street": "15 Admiralty Way",
+      "city": "Lekki",
+      "state": "Lagos",
+      "country": "Nigeria",
+      "postalCode": "105102"
+    },
+    "department": "Cardiology",
+    "specialization": "Interventional Cardiology",
+    "licenseNumber": "MDCN-456789",
+    "yearsOfExperience": 18,
+    "qualification": [
+      "MBBS",
+      "FWACP (Cardiology)"
+    ],
+    "employmentType": "Full-Time",
+    "employmentDate": "2012-04-10",
+    "consultationFee": 20000,
+    "salary": 1200000,
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "08:00-16:00",
+      "wednesday": "08:00-16:00",
+      "thursday": "08:00-16:00",
+      "friday": "08:00-14:00",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "roomNumber": "C-205",
+    "status": "Available",
+    "emergencyContact": {
+      "name": "Mrs. Johnson",
+      "relationship": "Spouse",
+      "phone": "+2348098765432"
+    },
+    "languages": [
+      "English",
+      "Yoruba"
+    ],
+    "profileImage": "/images/doctors/doc001.jpg"
+  },
+  {
+    "doctorId": "DOC002",
+    "firstName": "Fatima",
+    "lastName": "Abdullahi",
+    "gender": "Female",
+    "dateOfBirth": "1988-11-03",
+    "age": 38,
+    "phone": "+2348031122334",
+    "email": "fatima.abdullahi@hospital.com",
+    "address": {
+      "street": "22 Ahmadu Bello Way",
+      "city": "Kaduna",
+      "state": "Kaduna",
+      "country": "Nigeria",
+      "postalCode": "800001"
+    },
+    "department": "Pediatrics",
+    "specialization": "Neonatology",
+    "licenseNumber": "MDCN-789456",
+    "yearsOfExperience": 11,
+    "qualification": [
+      "MBBS",
+      "FMCPaed"
+    ],
+    "employmentType": "Full-Time",
+    "employmentDate": "2016-09-12",
+    "consultationFee": 15000,
+    "salary": 900000,
+    "availability": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-15:00",
+      "saturday": "09:00-12:00",
+      "sunday": "Closed"
+    },
+    "roomNumber": "P-110",
+    "status": "Available",
+    "emergencyContact": {
+      "name": "Ahmed Abdullahi",
+      "relationship": "Brother",
+      "phone": "+2348077654321"
+    },
+    "languages": [
+      "English",
+      "Hausa"
+    ],
+    "profileImage": "/images/doctors/doc002.jpg"
+  },
+  {
+    "doctorId": "DOC003",
+    "firstName": "Chinedu",
+    "lastName": "Okafor",
+    "gender": "Male",
+    "dateOfBirth": "1979-02-27",
+    "age": 47,
+    "phone": "+2348069988776",
+    "email": "chinedu.okafor@hospital.com",
+    "address": {
+      "street": "12 Independence Layout",
+      "city": "Enugu",
+      "state": "Enugu",
+      "country": "Nigeria",
+      "postalCode": "400001"
+    },
+    "department": "Orthopedics",
+    "specialization": "Joint Replacement Surgery",
+    "licenseNumber": "MDCN-123987",
+    "yearsOfExperience": 20,
+    "qualification": [
+      "MBBS",
+      "FWACS (Orthopedics)"
+    ],
+    "employmentType": "Consultant",
+    "employmentDate": "2010-01-18",
+    "consultationFee": 25000,
+    "salary": 1500000,
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "Surgery",
+      "wednesday": "08:00-16:00",
+      "thursday": "Surgery",
+      "friday": "08:00-14:00",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "roomNumber": "O-310",
+    "status": "On Leave",
+    "emergencyContact": {
+      "name": "Ngozi Okafor",
+      "relationship": "Wife",
+      "phone": "+2348035566778"
+    },
+    "languages": [
+      "English",
+      "Igbo"
+    ],
+    "profileImage": "/images/doctors/doc003.jpg"
+  },
+  {
+    "doctorId": "DOC004",
+    "firstName": "Grace",
+    "lastName": "Eze",
+    "gender": "Female",
+    "dateOfBirth": "1985-08-09",
+    "age": 41,
+    "phone": "+2348055544333",
+    "email": "grace.eze@hospital.com",
+    "address": {
+      "street": "8 Gana Street",
+      "city": "Abuja",
+      "state": "FCT",
+      "country": "Nigeria",
+      "postalCode": "900287"
+    },
+    "department": "Endocrinology",
+    "specialization": "Diabetes and Metabolism",
+    "licenseNumber": "MDCN-654321",
+    "yearsOfExperience": 14,
+    "qualification": [
+      "MBBS",
+      "FWACP (Endocrinology)"
+    ],
+    "employmentType": "Full-Time",
+    "employmentDate": "2014-06-20",
+    "consultationFee": 18000,
+    "salary": 1100000,
+    "availability": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-15:00",
+      "friday": "09:00-14:00",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "roomNumber": "E-402",
+    "status": "Available",
+    "emergencyContact": {
+      "name": "Mr. Eze",
+      "relationship": "Father",
+      "phone": "+2348032211444"
+    },
+    "languages": [
+      "English",
+      "Igbo"
+    ],
+    "profileImage": "/images/doctors/doc004.jpg"
+  },
+  {
+    "doctorId": "DOC005",
+    "firstName": "Ibrahim",
+    "lastName": "Musa",
+    "gender": "Male",
+    "dateOfBirth": "1977-01-16",
+    "age": 49,
+    "phone": "+2348098765432",
+    "email": "ibrahim.musa@hospital.com",
+    "address": {
+      "street": "19 Kado Road",
+      "city": "Abuja",
+      "state": "FCT",
+      "country": "Nigeria",
+      "postalCode": "900110"
+    },
+    "department": "Neurology",
+    "specialization": "Neurocritical Care",
+    "licenseNumber": "MDCN-147852",
+    "yearsOfExperience": 22,
+    "qualification": [
+      "MBBS",
+      "FMCP (Neurology)"
+    ],
+    "employmentType": "Consultant",
+    "employmentDate": "2008-11-03",
+    "consultationFee": 22000,
+    "salary": 1400000,
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "08:00-16:00",
+      "wednesday": "08:00-16:00",
+      "thursday": "08:00-14:00",
+      "friday": "08:00-13:00",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "roomNumber": "N-118",
+    "status": "Inactive",
+    "emergencyContact": {
+      "name": "Amina Musa",
+      "relationship": "Sister",
+      "phone": "+2348076665544"
+    },
+    "languages": [
+      "English",
+      "Hausa"
+    ],
+    "profileImage": "/images/doctors/doc005.jpg"
+  }
+]

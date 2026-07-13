@@ -1,0 +1,93 @@
+[
+  {
+    "id": "V001",
+    "patientId": "PAT001",
+    "recordedDate": "2026-07-08",
+    "bloodPressure": "142/92",
+    "heartRate": 82,
+    "temperature": 36.8,
+    "respiratoryRate": 18,
+    "oxygenSaturation": 97,
+    "weight": 84,
+    "height": 178,
+    "bloodGroup": "O+"
+  },
+  {
+    "id": "V002",
+    "patientId": "PAT001",
+    "recordedDate": "2026-06-10",
+    "bloodPressure": "138/90",
+    "heartRate": 80,
+    "temperature": 36.6,
+    "respiratoryRate": 17,
+    "oxygenSaturation": 98,
+    "weight": 85,
+    "height": 178,
+    "bloodGroup": "O+"
+  },
+  {
+    "id": "V003",
+    "patientId": "PAT002",
+    "recordedDate": "2026-07-05",
+    "bloodPressure": "118/76",
+    "heartRate": 88,
+    "temperature": 36.9,
+    "respiratoryRate": 20,
+    "oxygenSaturation": 95,
+    "weight": 68,
+    "height": 163,
+    "bloodGroup": "A+"
+  },
+  {
+    "id": "V004",
+    "patientId": "PAT003",
+    "recordedDate": "2026-07-02",
+    "bloodPressure": "116/74",
+    "heartRate": 70,
+    "temperature": 36.5,
+    "respiratoryRate": 15,
+    "oxygenSaturation": 99,
+    "weight": 72,
+    "height": 180,
+    "bloodGroup": "B+"
+  },
+  {
+    "id": "V005",
+    "patientId": "PAT004",
+    "recordedDate": "2026-07-09",
+    "bloodPressure": "124/80",
+    "heartRate": 76,
+    "temperature": 36.7,
+    "respiratoryRate": 16,
+    "oxygenSaturation": 98,
+    "weight": 65,
+    "height": 160,
+    "bloodGroup": "AB+"
+  },
+  {
+    "id": "V006",
+    "patientId": "PAT004",
+    "recordedDate": "2026-05-20",
+    "bloodPressure": "128/82",
+    "heartRate": 78,
+    "temperature": 36.6,
+    "respiratoryRate": 16,
+    "oxygenSaturation": 98,
+    "weight": 66,
+    "height": 160,
+    "bloodGroup": "AB+"
+  },
+  {
+    "id": "V007",
+    "patientId": "PAT005",
+    "recordedDate": "2026-06-28",
+    "bloodPressure": "134/86",
+    "heartRate": 74,
+    "temperature": 36.5,
+    "respiratoryRate": 17,
+    "oxygenSaturation": 96,
+    "weight": 90,
+    "height": 172,
+    "bloodGroup": "O-"
+  }
+]

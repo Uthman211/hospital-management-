@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "How do I book an appointment online ?",
+        "answer": "You can book an appointment by clicking the 'Book Now' button in the navigation or visiting our appointments page. Simply select your department, doctor, and preferred time slot."
+    },
+    {
+        "id": 2,
+        "question": "What insurance provider do you accept",
+        "answer": "We accept most major insurance providers including BlueCross, Aetna, Cigna, and UnitedHealthcare. Please check our insurance partners section or contact us for a full list."
+    },
+    {
+        "id": 3,
+        "question": "Are emergency services available 24/7",
+        "answer": " Yes, our emergency department is fully staffed and equipped to handle any medical emergencies 24 hours a day, 7 days a week."
+    },
+    {
+        "id": 4,
+        "question": "Can I access my medical records online?",
+        "answer": "Absolutely. Through our Patient Portal, you can securely access your lab results, prescription history, and visit summaries at any time."
+    }
+]

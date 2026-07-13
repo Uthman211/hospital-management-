@@ -1,0 +1,50 @@
+[
+  {
+    "paymentId": "PAY001",
+    "appointmentId": "APT001",
+    "patientId": "PAT001",
+    "patientName": "John Doe",
+    "description": "Cardiology consultation",
+    "amount": 25000,
+    "paymentMethod": "Card",
+    "paymentStatus": "Paid",
+    "paymentDate": "2026-07-03",
+    "invoiceNumber": "INV001"
+  },
+  {
+    "paymentId": "PAY002",
+    "appointmentId": "APT002",
+    "patientId": "PAT002",
+    "patientName": "Mary Johnson",
+    "description": "Asthma follow-up",
+    "amount": 18000,
+    "paymentMethod": "Transfer",
+    "paymentStatus": "Paid",
+    "paymentDate": "2026-07-03",
+    "invoiceNumber": "INV002"
+  },
+  {
+    "paymentId": "PAY003",
+    "appointmentId": "APT003",
+    "patientId": "PAT003",
+    "patientName": "David Adeyemi",
+    "description": "General consultation",
+    "amount": 12000,
+    "paymentMethod": "Cash",
+    "paymentStatus": "Pending",
+    "paymentDate": "2026-07-04",
+    "invoiceNumber": "INV003"
+  },
+  {
+    "paymentId": "PAY004",
+    "appointmentId": "APT004",
+    "patientId": "PAT004",
+    "patientName": "Aisha Bello",
+    "description": "Diabetes treatment",
+    "amount": 35000,
+    "paymentMethod": "Insurance",
+    "paymentStatus": "Paid",
+    "paymentDate": "2026-07-05",
+    "invoiceNumber": "INV004"
+  }
+]

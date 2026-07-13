@@ -1,0 +1,50 @@
+[
+  {
+    "treatmentId": "TRT001",
+    "appointmentId": "APT001",
+    "patientId": "PAT001",
+    "patientName": "John Doe",
+    "doctorId": "DOC001",
+    "doctorName": "Dr. Ibrahim Musa",
+    "diagnosis": "Hypertension",
+    "treatment": "Medication",
+    "treatmentDate": "2026-07-03",
+    "status": "Scheduled"
+  },
+  {
+    "treatmentId": "TRT002",
+    "appointmentId": "APT002",
+    "patientId": "PAT002",
+    "patientName": "Mary Johnson",
+    "doctorId": "DOC002",
+    "doctorName": "Dr. Fatima Bello",
+    "diagnosis": "Asthma",
+    "treatment": "Inhaler Therapy",
+    "treatmentDate": "2026-07-03",
+    "status": "Ongoing"
+  },
+  {
+    "treatmentId": "TRT003",
+    "appointmentId": "APT003",
+    "patientId": "PAT003",
+    "patientName": "David Adeyemi",
+    "doctorId": "DOC003",
+    "doctorName": "Dr. Samuel Okoro",
+    "diagnosis": "Migraine",
+    "treatment": "Pain Relief",
+    "treatmentDate": "2026-07-04",
+    "status": "Completed"
+  },
+  {
+    "treatmentId": "TRT004",
+    "appointmentId": "APT004",
+    "patientId": "PAT004",
+    "patientName": "Aisha Bello",
+    "doctorId": "DOC004",
+    "doctorName": "Dr. Grace Eze",
+    "diagnosis": "Diabetes",
+    "treatment": "Insulin Therapy",
+    "treatmentDate": "2026-07-05",
+    "status": "Ongoing"
+  }
+]

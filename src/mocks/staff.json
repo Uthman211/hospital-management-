@@ -1,0 +1,112 @@
+[
+  {
+    "staffId": "STF001",
+    "name": "Grace Adebayo",
+    "role": "Receptionist",
+    "department": "Front Desk",
+    "email": "grace.adebayo@hospital.com",
+    "phone": "+2348012345671",
+    "gender": "Female",
+    "status": "Active",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF002",
+    "name": "Michael Okafor",
+    "role": "Pharmacist",
+    "department": "Pharmacy",
+    "email": "michael.okafor@hospital.com",
+    "phone": "+2348012345672",
+    "gender": "Male",
+    "status": "On Leave",
+    "shift": "Evening"
+  },
+  {
+    "staffId": "STF003",
+    "name": "Fatima Bello",
+    "role": "Laboratory Scientist",
+    "department": "Laboratory",
+    "email": "fatima.bello@hospital.com",
+    "phone": "+2348012345673",
+    "gender": "Female",
+    "status": "Active",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF004",
+    "name": "Ibrahim Musa",
+    "role": "Radiographer",
+    "department": "Radiology",
+    "email": "ibrahim.musa@hospital.com",
+    "phone": "+2348012345674",
+    "gender": "Male",
+    "status": "Inactive",
+    "shift": "Night"
+  },
+  {
+    "staffId": "STF005",
+    "name": "Ngozi Eze",
+    "role": "Nurse",
+    "department": "Emergency",
+    "email": "ngozi.eze@hospital.com",
+    "phone": "+2348012345675",
+    "gender": "Female",
+    "status": "Active",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF006",
+    "name": "Samuel Johnson",
+    "role": "Accountant",
+    "department": "Finance",
+    "email": "samuel.johnson@hospital.com",
+    "phone": "+2348012345676",
+    "gender": "Male",
+    "status": "Active",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF007",
+    "name": "Esther Williams",
+    "role": "Medical Records Officer",
+    "department": "Records",
+    "email": "esther.williams@hospital.com",
+    "phone": "+2348012345677",
+    "gender": "Female",
+    "status": "Inactive",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF008",
+    "name": "Ahmed Yusuf",
+    "role": "IT Support",
+    "department": "ICT",
+    "email": "ahmed.yusuf@hospital.com",
+    "phone": "+2348012345678",
+    "gender": "Male",
+    "status": "Active",
+    "shift": "Morning"
+  },
+  {
+    "staffId": "STF009",
+    "name": "Chioma Nwosu",
+    "role": "Cleaner",
+    "department": "Housekeeping",
+    "email": "chioma.nwosu@hospital.com",
+    "phone": "+2348012345679",
+    "gender": "Female",
+    "status": "Active",
+    "shift": "Evening"
+  },
+  {
+    "staffId": "STF010",
+    "name": "Peter Adewale",
+    "role": "Security Officer",
+    "department": "Security",
+    "email": "peter.adewale@hospital.com",
+    "phone": "+2348012345680",
+    "gender": "Male",
+    "status": "Active",
+    "shift": "Night"
+  }
+]

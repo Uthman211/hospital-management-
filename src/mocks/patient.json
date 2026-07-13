@@ -1,0 +1,154 @@
+[
+  {
+    "id": "PAT001",
+    "firstName": "John",
+    "lastName": "Faith",
+    "gender": "Male",
+    "dateOfBirth": "1992-05-14",
+    "age": 33,
+    "bloodGroup": "O+",
+    "phone": "+2348012345678",
+    "email": "john.doe@example.com",
+    "address": {
+      "street": "12 Adekunle Street",
+      "city": "Lagos",
+      "state": "Lagos",
+      "country": "Nigeria"
+    },
+    "emergencyContact": {
+      "name": "Jane Doe",
+      "relationship": "Wife",
+      "phone": "+2348098765432"
+    },
+    "medicalHistory": [
+      "Hypertension"
+    ],
+    "allergies": [
+      "Penicillin"
+    ],
+    "currentMedications": [
+      "Amlodipine"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PAT002",
+    "firstName": "Mary",
+    "lastName": "Johnson",
+    "gender": "Female",
+    "dateOfBirth": "1988-11-02",
+    "age": 37,
+    "bloodGroup": "A+",
+    "phone": "+2348023456789",
+    "email": "mary.johnson@example.com",
+    "address": {
+      "street": "25 Unity Road",
+      "city": "Abuja",
+      "state": "FCT",
+      "country": "Nigeria"
+    },
+    "emergencyContact": {
+      "name": "Samuel Johnson",
+      "relationship": "Husband",
+      "phone": "+2348076543210"
+    },
+    "medicalHistory": [
+      "Asthma"
+    ],
+    "allergies": [
+      "Dust"
+    ],
+    "currentMedications": [
+      "Salbutamol Inhaler"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PAT003",
+    "firstName": "David",
+    "lastName": "Adeyemi",
+    "gender": "Male",
+    "dateOfBirth": "2000-03-20",
+    "age": 26,
+    "bloodGroup": "B+",
+    "phone": "+2348034567890",
+    "email": "david.adeyemi@example.com",
+    "address": {
+      "street": "18 Challenge Road",
+      "city": "Ibadan",
+      "state": "Oyo",
+      "country": "Nigeria"
+    },
+    "emergencyContact": {
+      "name": "Grace Adeyemi",
+      "relationship": "Mother",
+      "phone": "+2348067891234"
+    },
+    "medicalHistory": [],
+    "allergies": [],
+    "currentMedications": [],
+    "status": "Active"
+  },
+  {
+    "id": "PAT004",
+    "firstName": "Aisha",
+    "lastName": "Bello",
+    "gender": "Female",
+    "dateOfBirth": "1995-08-10",
+    "age": 30,
+    "bloodGroup": "AB+",
+    "phone": "+2348045678901",
+    "email": "aisha.bello@example.com",
+    "address": {
+      "street": "7 Emir Crescent",
+      "city": "Kano",
+      "state": "Kano",
+      "country": "Nigeria"
+    },
+    "emergencyContact": {
+      "name": "Musa Bello",
+      "relationship": "Brother",
+      "phone": "+2348019876543"
+    },
+    "medicalHistory": [
+      "Diabetes"
+    ],
+    "allergies": [
+      "Seafood"
+    ],
+    "currentMedications": [
+      "Metformin"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PAT005",
+    "firstName": "Chinedu",
+    "lastName": "Okafor",
+    "gender": "Male",
+    "dateOfBirth": "1978-01-18",
+    "age": 48,
+    "bloodGroup": "O-",
+    "phone": "+2348056789012",
+    "email": "chinedu.okafor@example.com",
+    "address": {
+      "street": "45 Independence Avenue",
+      "city": "Enugu",
+      "state": "Enugu",
+      "country": "Nigeria"
+    },
+    "emergencyContact": {
+      "name": "Ngozi Okafor",
+      "relationship": "Wife",
+      "phone": "+2348081234567"
+    },
+    "medicalHistory": [
+      "High Cholesterol"
+    ],
+    "allergies": [],
+    "currentMedications": [
+      "Atorvastatin"
+    ],
+    "status": "Inactive"
+  }
+]
