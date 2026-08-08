@@ -1,8 +1,7 @@
-import AuthCorner from "@/components/home/authcorner";
+
 import Footer from "@/components/home/footer";
-import Navbar from "@/components/home/navbar";
 import SiteHeader from "@/components/home/site-header";
-import { User, Stethoscope, ShieldCheck, Clock, Search, CheckCircle2, Phone, ArrowRight, Calendar, AlertCircle } from "lucide-react";
+import {  Stethoscope, ShieldCheck, Clock, Search, CheckCircle2, Phone, ArrowRight,  AlertCircle } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 import { hospitalAppointmentServices } from "@/services/appointmentServices";
@@ -117,7 +116,7 @@ export default function AppointmentsSection() {
                 <div className="lg:col-span-2 bg-[#131826] border border-white/5 rounded-3xl overflow-hidden animate-fade-in-up delay-4">
 
                     {/* Gradient header */}
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-8">
+                    <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-8 py-8">
                         <h2 className="text-2xl font-bold mb-1">Patient Reservation</h2>
                         <p className="text-blue-100 text-sm italic">Fill out the details below to secure your spot.</p>
                     </div>
@@ -154,7 +153,7 @@ export default function AppointmentsSection() {
                                         type="date"
                                         name="appointmentDate"
                                         required
-                                        className="bg-[#0e1320] border border-white/10 rounded-xl px-4 py-3 text-sm outline-none focus:border-blue-500/50 text-gray-300 w-full [color-scheme:dark]"
+                                        className="bg-[#0e1320] border border-white/10 rounded-xl px-4 py-3 text-sm outline-none focus:border-blue-500/50 text-gray-300 w-full scheme-dark"
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">

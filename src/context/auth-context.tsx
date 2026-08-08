@@ -1,4 +1,4 @@
-import type { AdminType, UserType } from "@/types/user.types";
+import type {  UserType } from "@/types/user.types";
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 
 interface AuthUserContext {

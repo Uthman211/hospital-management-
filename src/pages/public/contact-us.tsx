@@ -1,6 +1,6 @@
-import AuthCorner from "@/components/home/authcorner";
+
 import Footer from "@/components/home/footer";
-import Navbar from "@/components/home/navbar";
+
 import SiteHeader from "@/components/home/site-header";
 import { Phone, Mail, MapPin, AlertCircle, ArrowRight, ChevronRight, Bus } from "lucide-react";
 

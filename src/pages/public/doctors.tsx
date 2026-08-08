@@ -1,4 +1,4 @@
-import { Search, Filter, Briefcase, Clock, GraduationCap, MapPin, Phone, ChevronRight } from "lucide-react";
+import { Search, Filter, Briefcase, Clock, GraduationCap, MapPin, Phone } from "lucide-react";
 import Footer from "@/components/home/footer";
 import SiteHeader from "@/components/home/site-header";
 import { useQuery } from "@tanstack/react-query";
@@ -190,7 +190,7 @@ export default function DoctorsSection() {
 
             {/* Careers CTA */}
             <div className="max-w-6xl mx-auto px-6 pb-24">
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 px-10 py-16 animate-fade-in-up delay-1">
+                <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 to-blue-700 px-10 py-16 animate-fade-in-up delay-1">
                     <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden md:grid grid-cols-2 gap-4 opacity-40">
                         <div className="w-32 h-32 rounded-2xl bg-white/10 border border-white/20" />
                         <div className="w-32 h-32 rounded-2xl bg-white/10 border border-white/20" />

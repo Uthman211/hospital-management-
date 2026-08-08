@@ -20,7 +20,7 @@ export default function EditPatientModal({ patient }: EditPatientModalProps) {
 
     const { mutate: editPatient, isPending } = useMutation({
         mutationFn: (payload: Partial<patientType>) =>
-            hospitalPatientServices.updatePatient(patient._id, payload),
+            hospitalPatientServices.updatePatient(patient._id!, payload),
         onSuccess: () => {
             toast.success("Patient updated successfully");
             queryClient.invalidateQueries({ queryKey: ["patients"] });

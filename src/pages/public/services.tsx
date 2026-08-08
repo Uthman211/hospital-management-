@@ -1,6 +1,6 @@
-import AuthCorner from "@/components/home/authcorner";
+
 import Footer from "@/components/home/footer";
-import Navbar from "@/components/home/navbar";
+
 import SiteHeader from "@/components/home/site-header";
 import { Link } from "react-router-dom";
 import {
@@ -163,7 +163,7 @@ export default function ServicesSection() {
 
             {/* Emergency section */}
             <div className="relative overflow-hidden px-6 py-20">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-br from-red-950/30 via-transparent to-transparent pointer-events-none" />
                 <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                     <div className="animate-fade-in-up delay-1">
@@ -208,7 +208,7 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-                    <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 to-transparent animate-fade-in delay-2" />
+                    <div className="aspect-square rounded-2xl border border-white/10 bg-linear-to-br from-red-950/40 to-transparent animate-fade-in delay-2" />
 
                 </div>
             </div>
@@ -223,10 +223,10 @@ export default function ServicesSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     <div
-                        className="relative rounded-2xl overflow-hidden min-h-[340px] bg-cover bg-center flex items-end p-8 animate-fade-in-up delay-2"
+                        className="relative rounded-2xl overflow-hidden min-h-85 bg-cover bg-center flex items-end p-8 animate-fade-in-up delay-2"
                         style={{ backgroundImage: "url('/molecular-lab.jpg')" }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                         <div className="relative">
                             <h3 className="text-2xl font-bold mb-1">Molecular Laboratory</h3>
                             <p className="text-sm text-gray-300">DNA mapping and genetic screening at molecular level.</p>
