@@ -48,7 +48,7 @@
       "English",
       "Yoruba"
     ],
-    "profileImage": "/images/doctors/doc001.jpg"
+  "profileImage": "/adebayo.jpg"
   },
   {
     "doctorId": "DOC002",
@@ -98,7 +98,7 @@
       "English",
       "Hausa"
     ],
-    "profileImage": "/images/doctors/doc002.jpg"
+    "profileImage": "/fatimah.jpg"
   },
   {
     "doctorId": "DOC003",
@@ -148,7 +148,7 @@
       "English",
       "Igbo"
     ],
-    "profileImage": "/images/doctors/doc003.jpg"
+    "profileImage": "/chinedu.jpg"
   },
   {
     "doctorId": "DOC004",
@@ -198,7 +198,7 @@
       "English",
       "Igbo"
     ],
-    "profileImage": "/images/doctors/doc004.jpg"
+    "profileImage": "/grace.jpg"
   },
   {
     "doctorId": "DOC005",
@@ -248,6 +248,6 @@
       "English",
       "Hausa"
     ],
-    "profileImage": "/images/doctors/doc005.jpg"
+    "profileImage": "/ibrahim.jpg"
   }
 ]

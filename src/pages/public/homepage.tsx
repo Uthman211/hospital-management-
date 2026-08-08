@@ -11,6 +11,8 @@ import Doctor from "@/components/home/doctor"
 import Question from "@/components/home/question"
 import Booking from "@/components/home/booking"
 import Footer from "@/components/home/footer"
+import AuthCorner from "@/components/home/authcorner"
+import SiteHeader from "@/components/home/site-header"
 
 
 
@@ -20,7 +22,8 @@ function Homepage() {
 
     return (
         <>
-            <Navbar />
+                 <SiteHeader />
+
             <Herosection />
             <Info />
             <Services />

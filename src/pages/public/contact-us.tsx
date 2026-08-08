@@ -1,5 +1,7 @@
+import AuthCorner from "@/components/home/authcorner";
 import Footer from "@/components/home/footer";
 import Navbar from "@/components/home/navbar";
+import SiteHeader from "@/components/home/site-header";
 import { Phone, Mail, MapPin, AlertCircle, ArrowRight, ChevronRight, Bus } from "lucide-react";
 
 const supportHours = [
@@ -33,23 +35,25 @@ const contactCards = [
     },
 ];
 
+const cardDelays = ["delay-1", "delay-2", "delay-3"];
+
 export default function ContactSection() {
     return (
 
         <>
-        <Navbar/>
+        <SiteHeader />
         <div className="bg-[#0a0e1a] text-white px-6 py-20 pt-30">
 
             {/* Hero */}
             <div className="max-w-3xl mx-auto text-center mb-16">
-                <span className="inline-block text-xs font-semibold tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
+                <span className="inline-block text-xs font-semibold tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6 animate-fade-in-up delay-1">
                     GET IN TOUCH
                 </span>
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in-up delay-2">
                     We're Here To <br />
                     <span className="text-blue-500 italic">Help You Heal</span>
                 </h1>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-400 text-lg leading-relaxed animate-fade-in-up delay-3">
                     Have a question or need to schedule a consultation? Reach out to our team today
                     and experience personalized medical support.
                 </p>
@@ -57,10 +61,10 @@ export default function ContactSection() {
 
             {/* Contact cards */}
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-                {contactCards.map(({ icon: Icon, title, subtitle, value, linkLabel }) => (
+                {contactCards.map(({ icon: Icon, title, subtitle, value, linkLabel }, i) => (
                     <div
                         key={title}
-                        className="bg-[#131826] border border-white/5 rounded-2xl p-8 hover:border-blue-500/30 transition-colors"
+                        className={`bg-[#131826] border border-white/5 rounded-2xl p-8 hover:border-blue-500/30 transition-colors animate-fade-in-up ${cardDelays[i]}`}
                     >
                         <div className="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
                             <Icon className="w-5 h-5 text-blue-400" />
@@ -80,7 +84,7 @@ export default function ContactSection() {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                 {/* Send a message form */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 animate-fade-in-up delay-4">
                     <h2 className="text-3xl font-bold mb-2">Send a Message</h2>
                     <p className="text-gray-500 mb-8">
                         Fill out the form below and a member of our team will reach out shortly.
@@ -160,7 +164,7 @@ export default function ContactSection() {
                 <div className="flex flex-col gap-6">
 
                     {/* Emergency center */}
-                    <div className="bg-[#131826] border border-red-500/20 rounded-2xl p-7">
+                    <div className="bg-[#131826] border border-red-500/20 rounded-2xl p-7 animate-fade-in-up delay-1">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-10 h-10 rounded-xl bg-red-500/15 flex items-center justify-center shrink-0">
                                 <AlertCircle className="w-5 h-5 text-red-500" />
@@ -178,7 +182,7 @@ export default function ContactSection() {
                     </div>
 
                     {/* Patient support hours */}
-                    <div className="bg-[#131826] border border-white/5 rounded-2xl p-7">
+                    <div className="bg-[#131826] border border-white/5 rounded-2xl p-7 animate-fade-in-up delay-2">
                         <h3 className="text-lg font-semibold mb-5">Patient Support Hours</h3>
                         <div className="flex flex-col">
                             {supportHours.map(({ label, hours, dotColor }, i) => (

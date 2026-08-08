@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -11,27 +11,27 @@ const navLinks = [
 
 function Navbar() {
   return (
-    <section className="nav-bar">
-      <nav className="navbar">
-        <div className="logo">Blue<span style={{ color: "#4A90E2" }}>Co</span></div>
+    <nav className="navbar hidden lg:flex">
+      <div className="logo">Blue<span style={{ color: "#4A90E2" }}>Co</span></div>
 
-        <div className="nav-links">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === "/"}
-              className={`px-3 py-2 rounded-2xl ({ isActive }) => (isActive ? "active" : "")`}
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </div>
+      <div className="nav-links flex">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            end={link.to === "/"}
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-2xl ${isActive ? "active" : ""}`
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
+      </div>
 
-        <button className="nav-btn text-[#4A90E2]">Book Now</button>
-      </nav>
-    </section>
-  )
+
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

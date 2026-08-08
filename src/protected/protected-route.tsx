@@ -1,20 +1,15 @@
-
 import { useAuth } from "@/context/auth-context"
 import { Navigate, Outlet } from "react-router-dom"
 
-
-
-
 function ProtectedRoute() {
 
-const {user, admin} = useAuth ()
+    const { isStaffAuthenticated } = useAuth()
 
-if(!user || !admin) {
-    return <Navigate to={"/not-found"} />
-}
+    if (!isStaffAuthenticated) {
+        return <Navigate to="/staff-login" replace />
+    }
 
-  return <Outlet />
-
+    return <Outlet />
 }
 
 export default ProtectedRoute

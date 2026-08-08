@@ -107,6 +107,38 @@
   font-variation-settings:
     "wdth" 100;
 }
+/* Here */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; opacity: 0; }
+.delay-2 { animation-delay: 0.25s; opacity: 0; }
+.delay-3 { animation-delay: 0.4s; opacity: 0; }
+.delay-4 { animation-delay: 0.55s; opacity: 0; }
+.delay-5 { animation-delay: 0.7s; opacity: 0; }
+.delay-6 { animation-delay: 0.85s; opacity: 0; }
+/* Here */
 
 body {
    background-color: black;
@@ -120,30 +152,45 @@ body {
 }
 
 /* NAVSECTION */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.site-header {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 50;
+  width: min(95%, 1300px);
+  justify-content: center;
+}
+
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 1000px);
   padding: 12px 25px;
   border-radius: 50px;
   background: #111827;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.nav-btn {
+  white-space: nowrap;
 }
 
-.nav-links a.active {
-  color: #4A90E2;
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.1);
+.nav-links {
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -152,7 +199,7 @@ body {
 
 .nav-links a.active {
   color: #4A90E2;
-  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .logo {
@@ -181,6 +228,7 @@ body {
   cursor: pointer;
   font-size: 13px;
   font-weight: 500;
+  
 }
 
 @theme inline {

@@ -6,9 +6,17 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group";
-import staffMembers from "@/mocks/staff.json"
+import CreateStaffModal from "@/components/create-staff-modal";
+import { useQuery } from "@tanstack/react-query";
+import { hospitalStaffServices } from "@/services/staffServices";
+import type { staffType } from "@/types/staff-type";
 
 export default function StaffPage() {
+  const { data: staff } = useQuery<staffType[]>({
+    queryKey: ["staff"],
+    queryFn: () => hospitalStaffServices.getAllStaff()
+  })
+
   return (
     <DashboardLayout>
       <section className="space-y-6">
@@ -20,10 +28,11 @@ export default function StaffPage() {
               <p className="text-sm text-gray-600">Manage clinical and support staff</p>
             </div>
           </div>
-          <button className="flex items-center rounded-md bg-blue-600 px-4 py-2 text-white">
-            <Plus className="mr-2 h-4 w-4" />
-            Add Staff
-          </button>
+
+          <div className="flex items-center bg-blue-500 text-white py-1 px-4 rounded-md cursor-pointer">
+            <Plus className="inline-block mr-2 text-white" />
+            <CreateStaffModal />
+          </div>
         </div>
 
         <div className="mx-auto w-[90%] text-black">
@@ -37,10 +46,10 @@ export default function StaffPage() {
 
         <div className="mx-auto w-[90%] rounded-2xl bg-gray-50 p-6 shadow-md">
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-black">Staff List</h2>
+            <h2 className="text-lg font-semibold text-black">Staff List ({staff?.length ?? 0})</h2>
           </div>
 
-          <StaffTable data={staffMembers} />
+          <StaffTable />
         </div>
       </section>
     </DashboardLayout>

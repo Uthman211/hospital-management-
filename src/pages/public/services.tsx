@@ -1,5 +1,8 @@
+import AuthCorner from "@/components/home/authcorner";
 import Footer from "@/components/home/footer";
 import Navbar from "@/components/home/navbar";
+import SiteHeader from "@/components/home/site-header";
+import { Link } from "react-router-dom";
 import {
     Heart, Brain, Smile, Bone, Stethoscope, ShieldPlus,
     HeartPulse, Car, Zap, Activity, Phone, ArrowRight,
@@ -89,23 +92,25 @@ const trustBadges = [
     { icon: TrendingUp, label: "Hospital of the Year" },
 ];
 
+const cardDelays = ["delay-1", "delay-2", "delay-3", "delay-4", "delay-5", "delay-6"];
+
 export default function ServicesSection() {
     return (
         <>
-        <Navbar />
-      
+        <SiteHeader />
+
         <div className="bg-[#0a0e1a] text-white pt-10">
 
             {/* Hero */}
             <div className="max-w-3xl mx-auto text-center px-6 pt-20 pb-16">
-                <span className="inline-block text-xs font-semibold tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
+                <span className="inline-block text-xs font-semibold tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6 animate-fade-in-up delay-1">
                     OUR EXPERTISE
                 </span>
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in-up delay-2">
                     Medical Specialties <br />
                     <span className="text-blue-500">Built On Excellence</span>
                 </h1>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-400 text-lg leading-relaxed animate-fade-in-up delay-3">
                     Explore our wide range of specialized medical services designed to provide
                     you with the best outcomes through innovation and care.
                 </p>
@@ -113,10 +118,10 @@ export default function ServicesSection() {
 
             {/* Specialty cards */}
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-24">
-                {specialties.map(({ icon: Icon, iconBg, iconColor, badge, title, description, services, specialists }) => (
+                {specialties.map(({ icon: Icon, iconBg, iconColor, badge, title, description, services, specialists }, i) => (
                     <div
                         key={title}
-                        className="flex flex-col bg-[#131826] border border-white/5 rounded-2xl p-7 hover:border-blue-500/30 transition-colors"
+                        className={`flex flex-col bg-[#131826] border border-white/5 rounded-2xl p-7 hover:border-blue-500/30 transition-colors animate-fade-in-up ${cardDelays[i]}`}
                     >
                         <div className="flex items-start justify-between mb-5">
                             <div className={`w-11 h-11 rounded-xl ${iconBg} flex items-center justify-center`}>
@@ -144,10 +149,13 @@ export default function ServicesSection() {
                                 <Users className="w-3.5 h-3.5" />
                                 {specialists} Specialists
                             </span>
-                            <button className="flex items-center gap-1 bg-blue-600 hover:bg-blue-500 transition-colors rounded-full pl-4 pr-3 py-1.5 text-xs font-semibold">
+                            <Link
+                                to={`/appointment?specialty=${encodeURIComponent(title)}`}
+                                className="flex items-center gap-1 bg-blue-600 hover:bg-blue-500 transition-colors rounded-full pl-4 pr-3 py-1.5 text-xs font-semibold"
+                            >
                                 Book Now
                                 <ArrowRight className="w-3.5 h-3.5" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
@@ -158,7 +166,7 @@ export default function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-transparent to-transparent pointer-events-none" />
                 <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    <div>
+                    <div className="animate-fade-in-up delay-1">
                         <span className="inline-block text-xs font-bold tracking-wider text-white bg-red-600 rounded-md px-3 py-1.5 mb-6">
                             EMERGENCY
                         </span>
@@ -200,14 +208,14 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-                    <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 to-transparent" />
+                    <div className="aspect-square rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 to-transparent animate-fade-in delay-2" />
 
                 </div>
             </div>
 
             {/* Advanced diagnostics */}
             <div className="max-w-6xl mx-auto px-6 py-20">
-                <div className="text-center mb-12">
+                <div className="text-center mb-12 animate-fade-in-up delay-1">
                     <h2 className="text-4xl font-bold mb-3">Advanced Diagnostics</h2>
                     <p className="text-gray-400">Precision medicine starts with precision imaging and laboratory analysis.</p>
                 </div>
@@ -215,7 +223,7 @@ export default function ServicesSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                     <div
-                        className="relative rounded-2xl overflow-hidden min-h-[340px] bg-cover bg-center flex items-end p-8"
+                        className="relative rounded-2xl overflow-hidden min-h-[340px] bg-cover bg-center flex items-end p-8 animate-fade-in-up delay-2"
                         style={{ backgroundImage: "url('/molecular-lab.jpg')" }}
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -226,10 +234,10 @@ export default function ServicesSection() {
                     </div>
 
                     <div className="grid grid-cols-2 gap-6">
-                        {diagnostics.map(({ icon: Icon, title, description }) => (
+                        {diagnostics.map(({ icon: Icon, title, description }, i) => (
                             <div
                                 key={title}
-                                className="bg-[#131826] border border-white/5 rounded-2xl p-6 flex flex-col"
+                                className={`bg-[#131826] border border-white/5 rounded-2xl p-6 flex flex-col animate-fade-in-up ${i < 2 ? "delay-3" : "delay-4"}`}
                             >
                                 <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
                                     <Icon className="w-4 h-4 text-blue-400" />
@@ -245,7 +253,7 @@ export default function ServicesSection() {
 
             {/* Trust badges */}
             <div className="border-t border-white/5 px-6 py-10">
-                <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-16 gap-y-4">
+                <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-16 gap-y-4 animate-fade-in delay-1">
                     {trustBadges.map(({ icon: Icon, label }) => (
                         <div key={label} className="flex items-center gap-2 text-sm text-gray-500">
                             <Icon className="w-4 h-4" />
@@ -257,6 +265,6 @@ export default function ServicesSection() {
 
         </div>
         <Footer />
-          </>
+        </>
     );
 }

@@ -1,16 +1,20 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import DashboardLayout from "@/components/dashboardlayout";
-import doctors from "@/mocks/doctor.json";
 import appointments from "@/mocks/appointment.json";
 import diagnoses from "@/mocks/treatment.json";
 import DetailRow from "@/components/detail-row";
-import { ArrowLeft, Edit } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { hospitalDoctorServices } from "@/services/doctorServices";
+import EditDoctorModal from "@/components/edit-doctor-modal";
+import { toast } from "sonner";
 
 const availableStyle: Record<string, string> = {
     "Available": "bg-green-500/10 border border-green-500/20 text-green-900",
     "Inactive": "bg-red-500/10 border border-red-500/20 text-red-900",
-    "On Leave": "bg-amber-100 border text-amber-700"
+    "On Leave": "bg-amber-100 border text-amber-700",
+    "Scheduled": "bg-blue-500/10 border border-blue-500/20 text-blue-900",
 };
 
 const ScheduledStyle: Record<string, string> = {
@@ -22,14 +26,52 @@ const ScheduledStyle: Record<string, string> = {
 
 export default function DoctorDetailPage() {
     const { id } = useParams();
-    const index = Number(id);
-    const doctor = doctors[index];
+    const navigate = useNavigate();
+    const queryClient = useQueryClient();
 
-    if (!doctor) {
+    const { data: doctor, isLoading, error } = useQuery({
+        queryKey: ["doctor", id],
+        queryFn: () => hospitalDoctorServices.getDoctorById(id!),
+        enabled: !!id,
+    });
+
+    const { mutate: removeDoctor, isPending: isDeleting } = useMutation({
+        mutationFn: () => hospitalDoctorServices.deleteDoctor(id!),
+        onSuccess: () => {
+            toast.success("Doctor deleted successfully");
+            queryClient.invalidateQueries({ queryKey: ["doctors"] });
+            navigate("/doctors");
+        },
+        onError: (error: any) => {
+            toast.error(error?.response?.data?.message ?? "Unable to delete doctor");
+        }
+    });
+
+    const handleDelete = () => {
+        if (!doctor) return;
+        const confirmed = window.confirm(
+            `Are you sure you want to delete Dr. ${doctor.firstName} ${doctor.lastName}? This cannot be undone.`
+        );
+        if (confirmed) {
+            removeDoctor();
+        }
+    };
+
+    if (isLoading) {
         return (
             <DashboardLayout>
                 <section className="w-[90%] mx-auto mt-10 text-black">
-                    <p>Doctor not found.</p>
+                    <p>Loading doctor...</p>
+                </section>
+            </DashboardLayout>
+        );
+    }
+
+    if (error || !doctor) {
+        return (
+            <DashboardLayout>
+                <section className="w-[90%] mx-auto mt-10 text-black">
+                    <p>{error?.message}</p>
                     <Link to="/doctors" className="text-blue-500">Back to Doctors</Link>
                 </section>
             </DashboardLayout>
@@ -38,11 +80,11 @@ export default function DoctorDetailPage() {
 
     const fullName = `${doctor.firstName} ${doctor.lastName}`;
     const doctorAppointments = appointments.filter(
-  a => a.doctorName?.trim().toLowerCase().includes(fullName.trim().toLowerCase())
-);
-const doctorDiagnoses = diagnoses.filter(
-  d => d.doctorName?.trim().toLowerCase().includes(fullName.trim().toLowerCase())
-);
+        a => a.doctorName?.trim().toLowerCase().includes(fullName.trim().toLowerCase())
+    );
+    const doctorDiagnoses = diagnoses.filter(
+        d => d.doctorName?.trim().toLowerCase().includes(fullName.trim().toLowerCase())
+    );
 
     return (
         <DashboardLayout>
@@ -63,16 +105,19 @@ const doctorDiagnoses = diagnoses.filter(
                             <h1 className="text-2xl font-bold">{fullName}</h1>
                             <p className="text-sm text-gray-500">{doctor.specialization} · {doctor.department}</p>
                         </div>
-                        <span className={`ml-4 rounded-sm px-3 py-1 text-xs font-medium ${availableStyle[doctor.status] ?? ""}`}>
+                        <span className={`ml-4 rounded-sm px-3 py-1 text-xs font-medium ${availableStyle[doctor.status ?? ""] ?? ""}`}>
                             {doctor.status}
                         </span>
                     </div>
                     <div className="flex gap-3">
-                        <button className="flex items-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm">
-                            <Edit className="w-4 h-4 text-green-600" /> Edit
-                        </button>
-                        <button className="flex items-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm">
-                            <RiDeleteBin6Line className="w-4 h-4 text-red-500" /> Delete
+                        <EditDoctorModal doctor={doctor} />
+                        <button
+                            onClick={handleDelete}
+                            disabled={isDeleting}
+                            className="flex items-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm disabled:opacity-50"
+                        >
+                            <RiDeleteBin6Line className="w-4 h-4 text-red-500" />
+                            {isDeleting ? "Deleting..." : "Delete"}
                         </button>
                     </div>
                 </div>
@@ -84,14 +129,14 @@ const doctorDiagnoses = diagnoses.filter(
                         <DetailRow label="Full Name" value={fullName} />
                         <DetailRow label="Specialization" value={doctor.specialization} />
                         <DetailRow label="Department" value={doctor.department} />
-                        <DetailRow label="Qualifications" value={doctor.qualification[0]} />
+                        <DetailRow label="Qualifications" value={doctor.qualification?.[0]} />
                         <DetailRow label="Gender" value={doctor.gender} />
                     </div>
                     <div className="bg-gray-50 rounded-2xl p-6 shadow-md">
                         <h2 className="font-semibold mb-3">Contact Info</h2>
                         <DetailRow label="Email" value={doctor.email} />
                         <DetailRow label="Phone" value={doctor.phone} />
-                        <DetailRow label="Address" value={doctor.address.street} />
+                        <DetailRow label="Address" value={doctor.address?.street} />
                     </div>
                 </div>
 
